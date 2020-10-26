@@ -1,24 +1,29 @@
 import React from 'react';
 import './App.css';
+import {BrowserRouter as Router,Switch,Route} from "react-router-dom";
 import Home from './Home.js'
 import Header from './Header.js'
+import Footer from './Footer.js'
+import SearchPage from './SearchPage.js'
 
 
 function App() {
   return (
-    <div className="App">
+    <div className="app">
+    <Router>
+
     <Header />
-    <Home />
-    {/*home*/}
-      {/*header*/}
-      {/*banner*/}
-      {/*cards*/}
-      {/*footer*/}
-      {/*search page*/}
+    <Switch>
+      <Route path="/search">
+        <SearchPage />
+      </Route>
+      <Route path="/">
+        <Home />
+      </Route>
+    </Switch>
 
-
-
-
+    <Footer />
+    </Router>
     </div>
   );
 }
