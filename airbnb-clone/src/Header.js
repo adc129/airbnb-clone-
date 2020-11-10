@@ -4,16 +4,19 @@ import SearchIcon from "@material-ui/icons/Search";
 import LanguageIcon from '@material-ui/icons/Language';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import { Avatar } from "@material-ui/core";
+import { Link } from "react-router-dom";
 
 
 function Header() {
   return (
       <div className='header'>
-        <img
-          className="header__icon"
-          src="https://logos-download.com/wp-content/uploads/2016/03/Airbnb_logo_small.png"
-          alt=""
-        />
+        <Link to='/'>
+          <img
+            className="header__icon"
+            src="https://logos-download.com/wp-content/uploads/2016/03/Airbnb_logo_small.png"
+            alt=""
+          />
+        </Link>
         <div className='header__center'>
           <input type ="text" />
           <SearchIcon />
